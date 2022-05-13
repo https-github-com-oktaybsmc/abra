@@ -4,6 +4,7 @@ using System.Text;
 using System.Security.Cryptography;
 namespace ConsoleApp2
 {
+  
     public class Blok
     {
         public int giris { get; set; }
