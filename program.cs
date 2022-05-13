@@ -1,6 +1,6 @@
 using System;
 
-namespace uygulama1 
+namespace uygulama1
 {
     class Program
     {
