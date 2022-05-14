@@ -8,7 +8,7 @@ namespace yeni
 {
     internal class Blok
     {
-        private byte[] _Blokdegeri;
+        private byte[] _blokdegeri;
         private byte[] _oncekideger;
         private string _veri;
         private int _nonce;
