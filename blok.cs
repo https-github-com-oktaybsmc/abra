@@ -1,33 +1,32 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.Security.Cryptography;
-namespace ConsoleApp2
+using System.Threading.Tasks;
+
+namespace yeni
 {
-  
-    public class Blok
+    internal class Blok
     {
-        public int giris { get; set; }
-        public DateTime sure { get; set; }
-        public string oncekideger { get; set; }
-        public string deger { get; set; }
-        public string veri { get; set; }
-        public Blok(DateTime timeStamp, string previousHash, string data)
+        private byte[] _Blokdegeri;
+        private byte[] _oncekideger;
+        private string _veri;
+        private int _nonce;
+
+        public byte [] blokdegeri { get { return _blokdegeri; } }
+        public byte [] oncekideger { get { return _oncekideger; } }
+
+        public string veri { get { return _veri; } }
+
+        public int Nonce { get { return _nonce; } }
+        public Blok(byte[] Blokdegeri, byte[] oncekideger, string veri, int Nonce = 0)
         {
-            giris = 0;
-            sure = timeStamp;
-            oncekideger = previousHash;
-            veri = data;
-            deger = hashdegeri();
+            _Blokdegeri = Blokdegeri;
+            _oncekideger = oncekideger;
+            _veri = veri;
+            _nonce = Nonce;
         }
-        public string hashdegeri()
-        {
-            SHA256 alg = SHA256.Create();
-            byte[] inputBytes = Encoding.ASCII.GetBytes($"{sure}-{oncekideger ?? ""}-{veri}");
-            byte[] outputBytes = alg.ComputeHash(inputBytes);
-            return Convert.ToBase64String(outputBytes);
-        }
+
+
     }
-
-
 }
