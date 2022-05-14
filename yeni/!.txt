@@ -1,2 +1,0 @@
-NetFramework 5.0 ve üstü, Visual Studio Community 
-
