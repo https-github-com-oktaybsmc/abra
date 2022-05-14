@@ -10,7 +10,7 @@ namespace yeni
     static internal class bzlowlevel
     {
 
-        const string yaratılısblokmetin = "En Düşük Seviye'ye Ulaşıldı";
+        const string yaratılısblokmetin = "Genesis  blok";
         public static Blok yaratılısblokmetin()
         {
             byte[] oncekideger = BitConverter.GetBytes(0);
